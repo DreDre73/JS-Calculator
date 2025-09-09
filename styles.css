@@ -1,12 +1,25 @@
+body{
+    font-family:'roboto';
+    background-color: black;
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    height: 100vh;           /* full viewport height so vertical centering works */
+    margin: 0; 
+    
+}
 .calculatorContainer{
     display: flex;
     justify-content: center;
 }
 
 .bodyContainer{
-    width: 350px;
+    width: 300px;
     height: 500px;
-    background-color: black;
+    padding: 15px;
+    background-color: #222;
+    border: 5px solid #00ffea; /* neon cyan */
+    box-shadow: 0 0 15px #00ffea;
     border-radius: 20px;
 
     display: flex;
@@ -15,7 +28,99 @@
     
 }
 .displayContainer{
-    width: 350px;
+    width: 300px;
     height: 100px;
-    background-color: red;
+    background-color: #6c5ce7;
+    color: #ffeaa7;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.topDisplay{
+    /* background-color: darkgray; */
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: end;
+}
+.bottomDisplay{
+    /* background-color: rgb(114, 113, 113); */
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+}
+
+.buttonContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    width: 300px;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+
+    background-color: #74b9ff;
+    color: white;
+    transition: transform 0.1s ease, filter 0.1s ease; /* smooth effect */
+}
+
+/* Hover effect: slightly brighter / lift */
+button:hover {
+    filter: brightness(1.2); /* brighten button on hover */
+    transform: translateY(-2px); /* lift slightly */
+}
+
+/* Press effect: slightly darker / push down */
+button:active {
+    filter: brightness(0.9); /* darken button */
+    transform: translateY(1px); /* press down slightly */
+}
+
+#power {
+    width: 145px; /* spans 2 buttons (70px + 70px + gap) */
+}
+
+/* Operators */
+#divide {
+    background-color: #fd79a8; /* pink */
+}
+#multiply {
+    background-color: #fab1a0; /* peach */
+}
+#subtract {
+    background-color: #55efc4; /* aqua green */
+}
+#add {
+    background-color: #ffeaa7; /* yellow */
+    color: black;
+}
+
+/* Equals */
+#equal {
+    background-color: #00b894; /* emerald green */
+}
+
+/* Clear */
+#clear {
+    background-color: #d63031; /* bright red */
+}
+
+/* Backspace */
+#backspace {
+    background-color: #0984e3; /* strong blue */
+}
+
+/* Power */
+#power {
+    background-color: #e17055; /* orange */
 }
