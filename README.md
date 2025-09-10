@@ -14,3 +14,6 @@ A **simple, interactive calculator** built using **HTML, CSS, and JavaScript**. 
 - Responsive display with overflow handling
 - Neon-style button and UI effects
 - Footer with GitHub link
+
+## Preview
+Live Preview: https://dredre73.github.io/JS-Calculator/
