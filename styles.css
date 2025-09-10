@@ -2,9 +2,9 @@ body{
     font-family:'roboto';
     background-color: black;
     display: flex;
-    justify-content: center; /* horizontal centering */
-    align-items: center;     /* vertical centering */
-    height: 100vh;           /* full viewport height so vertical centering works */
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
     margin: 0; 
     
 }
@@ -18,7 +18,7 @@ body{
     height: 500px;
     padding: 15px;
     background-color: #222;
-    border: 5px solid #00ffea; /* neon cyan */
+    border: 5px solid #00ffea;
     box-shadow: 0 0 15px #00ffea;
     border-radius: 20px;
 
@@ -35,21 +35,24 @@ body{
     padding: 5px;
     border-radius: 10px;
     font-size: 25px;
+    white-space: nowrap;   /* keep everything on one line */
+    overflow: hidden;      /* hide anything that goes outside */
 }
 
 .topDisplay{
-    /* background-color: darkgray; */
     width: 300px;
     height: 60px;
     display: flex;
     justify-content: end;
+    
+    
 }
 .bottomDisplay{
-    /* background-color: rgb(114, 113, 113); */
     width: 300px;
     height: 40px;
     display: flex;
     justify-content: end;
+
 }
 
 .buttonContainer {
@@ -66,29 +69,31 @@ button {
     height: 70px;
     border-radius: 5px;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 
     background-color: #74b9ff;
     color: white;
-    transition: transform 0.1s ease, filter 0.1s ease; /* smooth effect */
+    transition: transform 0.1s ease, filter 0.1s ease; 
 }
 
-/* Hover effect: slightly brighter / lift */
+/* Decimal */
+#decimal{
+    font-size: 30px;
+}
+
 button:hover {
-    filter: brightness(1.2); /* brighten button on hover */
-    transform: translateY(-2px); /* lift slightly */
+    filter: brightness(1.2); 
+    transform: translateY(-2px); 
 }
 
-/* Press effect: slightly darker / push down */
+
 button:active {
-    filter: brightness(0.9); /* darken button */
-    transform: translateY(1px); /* press down slightly */
+    filter: brightness(0.9); 
+    transform: translateY(1px);
 }
 
-#power {
-    width: 145px; /* spans 2 buttons (70px + 70px + gap) */
-}
+
 
 /* Operators */
 #divide {
@@ -120,7 +125,37 @@ button:active {
     background-color: #0984e3; /* strong blue */
 }
 
+/* Plus minus */
+#plusMinus {
+    background-color: #ff00d4; /* soft purple */
+    color: white;
+    font-weight: bold;
+}
+
 /* Power */
 #power {
     background-color: #e17055; /* orange */
 }
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;         
+    bottom: 0;
+    left: 0;
+    background-color: #222;  
+    color: #00ffea;          
+    font-size: 14px;
+    font-family: 'roboto', sans-serif;
+}
+.footer a {
+    color: #00ffea;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
